@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+@font-face
+  font-family: "kust-font"
+  src:  url('kust.woff') format('woff'), url('kust.otf') format('otf')
+
+
+html
+  font-size: 10px
+  height: 100%
+
+body
+  font-size: 1.6rem
+  height: 100%
+  color: #333
+  background-color: #333
+  position: relative
+  margin: 0
+  padding: 0
+  font-family: 'Open Sans', sans-serif
+body::-webkit-scrollbar
+  width: 0rem
+
+header
+  width: auto
+  position: relative
+  height: 600px
+  background-image: url('dss_back.jpg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  color: #fff
+
+  .icon
+    position: absolute
+    right: 0
+    top: 0
+    margin: 10px
+  .headline
+    position: absolute
+    color: #85B8B3
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    font-size: 3rem
+    padding: 5px 10px
+    border: 5px solid #85B8B3
+    font-weight: bold
+    letter-spacing: 0.5rem
+  .subtitle
+    position: absolute
+    bottom: 0
+    right: 0
+    margin: 10px 30px
+    font-size: 1.2rem
+    word-spacing: 0.2rem
+    text-transform: uppercase
+    line-height: 1.2rem
+    padding: 5px 10px
+    background: #ddd
+    color: #222
+
+.content
+  display: flex
+  width: 100%
+  overflow: hidden
+  margin-bottom: 200px
+  .left_content
+    background-color: white
+    position: relative
+    min-width: 300px
+    .container
+      max-width: 70%
+      min-width: 300px
+      margin: 0 auto
+      margin-top: 30%
+
+      h2
+        font-weight: bold
+        position: relative
+        font-size: 3.2rem
+        &::before
+          content: ''
+          position: absolute
+          display: block
+          width: 40px
+          height: 5px
+          background-color: black
+          top: 6rem
+      p
+        margin-top: 30px
+
+  .right_content
+    background-color: #fff
+    background-image: url('hype_back.jpg')
+    background-position: center
+    background-size: cover
+    flex-grow: 1
+    min-width: 65%
+    height: 500px
+    color: #fff
+    line-height: 500px
+    text-align: center
+    font-size: 23.2rem
+    font-family: 'kust-font', sans-serif
+  @media (max-width: 500px)
+    .right_content
+      font-size: 15rem
+
+
+footer
+  padding: 40px 0
+  background-color: #333
+  position: fixed
+  bottom: 0
+  width: 100%
+  z-index: -1
+  // overflow: hidden
+  .footer_stuff
+    display: flex
+    justify-content: space-around
+    max-width: 800px
+    margin: 0 auto
+    background-color: #333
+    align-items: center
+    color: white
+  .links
+    display: flex
+    justify-content: space-around
+    // margin: 0 auto
+    .nav
+
+      ul
+        list-style-type: none
+        padding: 0 30px
+        li
+          text-align: center
+          line-height: 2.4rem
+          &:first-of-type
+            font-weight: 600
+            margin-bottom: 15px
+          a
+            text-decoration: none
+            color: #fff
+            &:hover
+             color: #85B8B3
+
+  .newsletter
+    display: flex
+    flex-direction: column
+    margin: 0 40px
+    form
+      display: flex
+      margin-top: 10px
+      input
+        background: #fff
+        color: #333
+        border: none
+        padding: 10px 15px
+      input[type="text"]
+        border-right: 1px solid black
+
+
+@media (max-width: 950px)
+  .content
+    flex-direction: column
+    .left_content
+      height: 400px
+      .container
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        margin-top: 0
+
+@media (max-width: 750px)
+  footer
+    // height: 300px
+    .footer_stuff
+      height: 100%
+      flex-wrap: wrap
+
+      .links
+        margin: 0 auto
+  .content
+      margin-bottom: 250px
